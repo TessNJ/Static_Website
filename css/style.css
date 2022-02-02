@@ -7,9 +7,10 @@
 }
 
 main {
-  background-color: lightgrey;
+  background-color: rgb(113, 197, 197);
   max-width: 50%;
   margin: 0 auto;
+  padding: 1rem;
 }
 
 article {
@@ -19,7 +20,7 @@ article {
 @supports (display: grid) {
   main {
     max-width: 100%;
-    margin: 0%;
+    margin: 0;
   }
   article {
     margin: 0;
@@ -28,13 +29,73 @@ article {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
     grid-gap: 1rem;
+    padding-left: 0;
   }
+  #main_product {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+    grid-gap: 1rem;
+    padding: 3% 3%;
+  }
+  #main_product img {
+    max-width: 100%;
+  }
+}
+
+header {
+  background-color: rgb(3, 59, 55);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1% 3%;
+}
+
+footer {
+  text-align: center;
+  padding: 2%;
+}
+
+h1,
+h2 {
+  padding-top: 2%;
 }
 
 .NoDiscount {
   display: none;
 }
 
-.CatButtons {
-  background-color: lightskyblue;
+.CatButtons li {
+  background-color: rgb(255, 255, 255);
+  list-style: none;
+  text-align: center;
+  padding: 5% 0;
+}
+
+.CatButtons a {
+  padding: 5% 44%;
+}
+
+.CatButtons li:hover {
+  background-color: gray;
+}
+
+#Info {
+  padding-top: 60%;
+  font-size: rem3;
+}
+
+#Info div {
+  background-color: gray;
+  max-width: 100%;
+  padding: 10% 20%;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+nav a {
+  color: white;
 }
