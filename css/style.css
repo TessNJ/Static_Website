@@ -1,12 +1,40 @@
-* {
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
   margin: 0;
   font-family: "Courier New", Courier, monospace;
 }
 
 main {
   background-color: lightgrey;
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+article {
+  margin: 1rem 0;
+}
+
+@supports (display: grid) {
+  main {
+    max-width: 100%;
+    margin: 0%;
+  }
+  article {
+    margin: 0;
+  }
+  .CatButtons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+    grid-gap: 1rem;
+  }
 }
 
 .NoDiscount {
   display: none;
+}
+
+.CatButtons {
+  background-color: lightskyblue;
 }
