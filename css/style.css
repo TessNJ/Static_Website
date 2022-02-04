@@ -7,7 +7,9 @@
 }
 
 main {
-  background-color: rgb(113, 197, 197);
+  background: url("/assets/COLOURBOX26292532.jpg");
+  background-size: cover;
+  background-attachment: fixed;
   max-width: 50%;
   margin: 0 auto;
   padding: 1rem;
@@ -54,6 +56,7 @@ header {
 
 .list_grid img {
   max-width: 100%;
+  border-radius: 2vw;
 }
 #main_list h1 {
   padding-left: 2vw;
@@ -73,15 +76,24 @@ h2 {
   display: none;
 }
 
+.add {
+  border-radius: 1vw;
+  padding: 1% 2%;
+  background-color: lightgrey;
+  box-shadow: none;
+}
+
 .CatButtons li {
   background-color: rgb(255, 255, 255);
   list-style: none;
   text-align: center;
   padding: 5% 0;
+  border: solid black 0.2vw;
+  border-radius: 1vw;
 }
 
 .CatButtons a {
-  padding: 5% 44%;
+  padding: 5% 40%;
 }
 
 .CatButtons li:hover {
@@ -103,7 +115,21 @@ a {
   text-decoration: none;
   color: rgb(0, 0, 0);
 }
+.Info_short a {
+  border: 1% rgb(104, 104, 104);
+  background-color: rgb(182, 182, 182);
+  border-radius: 0.5vw;
+  padding: 0 3%;
+}
 
 nav a {
   color: white;
+}
+
+.Info_short {
+  background-color: rgba(238, 238, 238, 0.904);
+  height: 16vw;
+  padding-left: 1.5vw;
+  border-radius: 2vw;
+  padding-top: 1vw;
 }
