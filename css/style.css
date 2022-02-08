@@ -47,11 +47,12 @@ p {
 }
 
 #main_product h1 {
-  font-size: 3vw;
+  font-size: 2.7vw;
 }
 
 .productImg {
-  border: solid #393939 1px;
+  /* border: solid #393939 1px; */
+  box-shadow: 0 0 2vw #393939;
 }
 
 header {
@@ -128,13 +129,12 @@ h1 {
 
 #Info {
   padding-top: 30%;
-  font-size: rem3;
+  margin-left: 7.5vw;
 }
 
 #Info div {
   max-width: 100%;
-  padding: 10% 20%;
-  padding-left: 10%;
+  padding: 5% 0;
 }
 
 a {
