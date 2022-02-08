@@ -26,3 +26,6 @@ function showProduct (product){
     //append it 
     parent.appendChild(copy);
 }
+
+
+/*Add sizing dropdown maybe*/
