@@ -9,7 +9,7 @@
 //     parentElement.appendChild(myClone);
 //     }
 
-const url = "https://kea-alt-del.dk/t7/api/products";
+const url = "https://kea-alt-del.dk/t7/api/products?brandname=Puma";
 
 fetch(url)
     .then(function (res) {
@@ -38,4 +38,6 @@ function showProduct(product) {
     const parent = document.querySelector("div.list_grid");
     //append
     parent.appendChild(copy);
-}   
+}
+
+/*Next page*/
