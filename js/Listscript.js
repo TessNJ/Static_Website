@@ -1,15 +1,8 @@
-// /*Product list*/
-// window.addEventListener("load", loading);
+const urlParams = new URLSearchParams(window.location.search);
+const id = urlParams.get("category");
 
-// function loading() {
-//     const templateElement = document.querySelector("#templateList").content;
-//     const myClone = templateElement.cloneNode(true);
-//     myClone.querySelector("h1").textContent = "Hi Mom";
-//     const parentElement = document.querySelector("main");
-//     parentElement.appendChild(myClone);
-//     }
-
-const url = "https://kea-alt-del.dk/t7/api/products?brandname=Puma";
+/* General dynamic */
+const url = "https://kea-alt-del.dk/t7/api/products?category=" + id;
 
 fetch(url)
     .then(function (res) {
@@ -34,6 +27,7 @@ function showProduct(product) {
     copy.querySelector(".type_brand").textContent = `${product.articletype}  |  ${product.brandname}`;
     copy.querySelector(".price").textContent = `${product.price} DKK`;
     copy.querySelector(".Img").src = `https://kea-alt-del.dk/t7/images/webp/1000/${product.id}.webp`;
+    copy.querySelector(".view").setAttribute("href", `product.html?id=${product.id}`);
     //grab parent
     const parent = document.querySelector("div.list_grid");
     //append

@@ -94,12 +94,14 @@ h2 {
   font-size: 1.5vw;
   font-weight: bold;
   color: #707070;
+  margin-bottom: 0.2rem;
 }
 h1 {
   font-size: 3vw;
   font-weight: bolder;
   font-style: italic;
   color: #707070;
+  margin-bottom: 0.2rem;
 }
 .NoDiscount {
   display: none;
@@ -117,7 +119,6 @@ h1 {
   background-color: #393939;
   list-style: none;
   text-align: center;
-  padding: 5% 0;
   border: none;
   color: white;
 }
@@ -125,6 +126,7 @@ h1 {
 .CatButtons a {
   padding: 5% 30%;
   color: white;
+  display: block;
 }
 
 .CatButtons li:hover {
@@ -133,7 +135,7 @@ h1 {
 }
 
 #Info {
-  padding-top: 30%;
+  /* padding-top: 30%; */
   margin-left: 7.5vw;
 }
 

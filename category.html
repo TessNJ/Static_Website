@@ -19,26 +19,14 @@
     <main id="main_category">
       <div>
         <h1>Categories</h1>
-        <section>
-          <h2>Brands</h2>
-          <ul class="CatButtons">
-            <li><a href="productlist.html">Nike</a></li>
-            <li><a href="productlist.html">Puma</a></li>
-            <li><a href="productlist.html">Nike</a></li>
-            <li><a href="productlist.html">Puma</a></li>
-          </ol>
-        </section>
-        <section>
-          <h2>Types</h2>
-          <ul class="CatButtons">
-            <li><a href="productlist.html">Topwear</a></li>
-            <li><a href="productlist.html">Bottoms</a></li>
-            <li><a href="productlist.html">Bags</a></li>
-            <li><a href="productlist.html">Accersories</a></li>
-          </ol>
-        </section>
+        <ul class="CatButtons">
+          <template id="templateCategory">
+            <li><a class="link" href="productlist.html">Nike</a></li>
+          </template>
+        </ul>
       </div>
     </main>
     <footer>MoreClothes</footer>
+    <script src="js/Category.js"></script>
   </body>
 </html>
