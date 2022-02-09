@@ -42,6 +42,9 @@ article {
       padding: 2% 30%;
       font-size: 2vw;
     }
+    .Info_short {
+      height: 26%;
+    }
   }
   @media screen and (min-width: 769px) and (max-width: 1100px) {
     .CatButtons,
@@ -61,6 +64,9 @@ article {
       padding: 3% 30%;
       font-size: 1.5vw;
     }
+    .Info_short {
+      height: 23%;
+    }
   }
   @media screen and (min-width: 1101px) {
     .CatButtons,
@@ -75,6 +81,9 @@ article {
       grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
       grid-gap: 1rem;
       padding: 3% 3%;
+    }
+    .Info_short {
+      height: 28%;
     }
   }
 }
@@ -217,12 +226,24 @@ nav {
 
 .Info_short {
   background-color: #393939;
-  padding: 5% 0;
-  padding-left: 1.5vw;
+  padding: 1.5vw;
   color: white;
 }
 
 #main_list .Img {
   max-width: 100%;
   /* border: 1px #393939 solid; */
+}
+
+.percent {
+  background-color: red;
+  padding: 2%;
+}
+.discounted {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hide {
+  display: none;
 }

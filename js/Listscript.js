@@ -18,6 +18,7 @@ function handleProductList(data) {
 }
 
 function showProduct(product) {
+    //soldOut onSale
     //grab the template
     const template = document.querySelector("#templateList").content;
     //clone it
@@ -28,7 +29,20 @@ function showProduct(product) {
     copy.querySelector(".price").textContent = `${product.price} DKK`;
     copy.querySelector(".Img").src = `https://kea-alt-del.dk/t7/images/webp/1000/${product.id}.webp`;
     copy.querySelector(".view").setAttribute("href", `product.html?id=${product.id}`);
+    
+    if(product.soldOut) {
+        copy.querySelector("article").classList.add("soldOut");
+    }
+    if(product.discount) {
+        copy.querySelector("article").classList.add("onSale");
+        copy.querySelector(".discounted p").textContent = `Now ${Math.floor(product.price - (product.price*(product.discount/100)))} DKK`;
+        copy.querySelector(".discounted .percent"). textContent = `-${product.discount}%`;
+        copy.querySelector(".price").textContent = `Before ${product.price} DKK`
+    } else {
+         copy.querySelector(".Info_short div").classList.add("hide");
+    }
     //grab parent
+
     const parent = document.querySelector("div.list_grid");
     //append
     parent.appendChild(copy);
