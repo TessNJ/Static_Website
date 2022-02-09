@@ -28,6 +28,7 @@ function showProduct(product) {
     copy.querySelector(".type_brand").textContent = `${product.articletype}  |  ${product.brandname}`;
     copy.querySelector(".price").textContent = `${product.price} DKK`;
     copy.querySelector(".Img").src = `https://kea-alt-del.dk/t7/images/webp/1000/${product.id}.webp`;
+    copy.querySelector(".Img").alt = product.productdisplayname;
     copy.querySelector(".view").setAttribute("href", `product.html?id=${product.id}`);
     
     if(product.soldOut) {
