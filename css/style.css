@@ -1,6 +1,9 @@
 /*variables*/
 :root {
-  --bacground-colour: #393939;
+  --main-colour: #393939;
+  --secondary-colour: #707070;
+  --shadow: 0 0 1rem #393939;
+  --font-colour: white;
 }
 /*styling*/
 *,
@@ -23,23 +26,20 @@ article {
 
 p {
   margin-bottom: 0.2rem;
-  font-size: 1.5vw;
+  font-size: 1.5rem;
+  max-width: 62ch;
 }
 
 #main_product h1 {
-  font-size: 2.7vw;
+  font-size: 2.7rem;
 }
 #main_product img {
   max-width: 100%;
 }
 
+.productImg,
 article:hover {
-  box-shadow: 0 0 10px black;
-}
-
-.productImg {
-  /* border: solid #393939 1px; */
-  box-shadow: 0 0 2vw #393939;
+  box-shadow: var(--shadow);
 }
 
 header {
@@ -55,7 +55,7 @@ header h1 {
   font-style: normal;
   padding: 1% 0;
   color: white;
-  font-size: 2vw;
+  font-size: 2rem;
 }
 
 .list_grid img {
@@ -74,13 +74,13 @@ h2 {
 
 h3,
 h2 {
-  font-size: 1.5vw;
+  font-size: 1.5rem;
   font-weight: bold;
   color: #707070;
   margin-bottom: 0.2rem;
 }
 h1 {
-  font-size: 3vw;
+  font-size: 3rem;
   font-weight: bolder;
   font-style: italic;
   color: #707070;
@@ -113,14 +113,14 @@ h1 {
 }
 
 .CatButtons li:hover {
-  box-shadow: 0 0 2vw #393939;
+  box-shadow: var(--shadow);
   background-color: #707070;
 }
 
-#Info {
-  /* padding-top: 30%; */
-  margin-left: 7.5vw;
-}
+/* #Info { */
+/* padding-top: 30%; */
+/* margin-left: 7.5rem; */
+/* } */
 
 #Info div {
   max-width: 100%;
@@ -137,7 +137,7 @@ a {
   border: none;
   box-shadow: none;
   color: white;
-  font-size: 1.5vw;
+  font-size: 1.5rem;
 }
 
 .Info_short a:hover {
@@ -147,7 +147,7 @@ a {
 
 nav a {
   color: white;
-  font-size: 1.5vw;
+  font-size: 1.5rem;
   font-weight: lighter;
   padding: 0 4%;
 }
@@ -160,7 +160,7 @@ nav {
 
 .Info_short {
   background-color: #393939;
-  padding: 1.5vw;
+  /* padding: 1.5rem; */
   color: white;
 }
 
@@ -178,10 +178,6 @@ nav {
   justify-content: space-between;
 }
 
-.hide {
-  display: none;
-}
-
 /* .soldOut img {
 } */
 
@@ -193,66 +189,52 @@ nav {
   article {
     margin: 0;
   }
-  @media screen and (max-width: 768px) {
-    .CatButtons,
-    #main_product {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(70%, 1fr));
-      grid-gap: 1rem;
-      padding-left: 0;
-    }
-    .list_grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
-      grid-gap: 1rem;
-      padding: 3% 3%;
-    }
-    .CatButtons a {
-      padding: 2% 30%;
-      font-size: 2vw;
-    }
-    .Info_short {
-      height: 26%;
-    }
+  .CatButtons,
+  #main_product {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(70%, 1fr));
+    grid-gap: 1rem;
+    padding-left: 0;
+  }
+  .list_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+    grid-gap: 1rem;
+    padding: 3% 3%;
+  }
+  .CatButtons a {
+    padding: 2% 30%;
+    font-size: 2rem;
+  }
+  .Info_short {
+    min-height: 26%;
   }
   @media screen and (min-width: 769px) and (max-width: 1100px) {
     .CatButtons,
     #main_product {
-      display: grid;
       grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
-      grid-gap: 1rem;
-      padding-left: 0;
     }
     .list_grid {
-      display: grid;
       grid-template-columns: repeat(auto-fit, minmax(35%, 1fr));
-      grid-gap: 1rem;
-      padding: 3% 3%;
     }
     .CatButtons a {
       padding: 3% 30%;
-      font-size: 1.5vw;
+      font-size: 1.5rem;
     }
     .Info_short {
-      height: 23%;
+      min-height: 23%;
     }
   }
   @media screen and (min-width: 1101px) {
     .CatButtons,
     #main_product {
-      display: grid;
       grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
-      grid-gap: 1rem;
-      padding-left: 0;
     }
     .list_grid {
-      display: grid;
       grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
-      grid-gap: 1rem;
-      padding: 3% 3%;
     }
     .Info_short {
-      height: 28%;
+      min-height: 28%;
     }
   }
 }

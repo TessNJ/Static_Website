@@ -40,7 +40,7 @@ function showProduct(product) {
         copy.querySelector(".discounted .percent"). textContent = `-${product.discount}%`;
         copy.querySelector(".price").textContent = `Before ${product.price} DKK`
     } else {
-         copy.querySelector(".Info_short div").classList.add("hide");
+         copy.querySelector(".Info_short .percent").classList.remove("percent");
     }
     //grab parent
 
