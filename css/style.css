@@ -1,3 +1,8 @@
+/*variables*/
+:root {
+  --bacground-colour: #393939;
+}
+/*styling*/
 *,
 *:before,
 *:after {
@@ -16,77 +21,6 @@ article {
   margin: 1rem 0;
 }
 
-@supports (display: grid) {
-  main {
-    max-width: 100%;
-    margin: 0 3%;
-  }
-  article {
-    margin: 0;
-  }
-  @media screen and (max-width: 768px) {
-    .CatButtons,
-    #main_product {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(70%, 1fr));
-      grid-gap: 1rem;
-      padding-left: 0;
-    }
-    .list_grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
-      grid-gap: 1rem;
-      padding: 3% 3%;
-    }
-    .CatButtons a {
-      padding: 2% 30%;
-      font-size: 2vw;
-    }
-    .Info_short {
-      height: 26%;
-    }
-  }
-  @media screen and (min-width: 769px) and (max-width: 1100px) {
-    .CatButtons,
-    #main_product {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
-      grid-gap: 1rem;
-      padding-left: 0;
-    }
-    .list_grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(35%, 1fr));
-      grid-gap: 1rem;
-      padding: 3% 3%;
-    }
-    .CatButtons a {
-      padding: 3% 30%;
-      font-size: 1.5vw;
-    }
-    .Info_short {
-      height: 23%;
-    }
-  }
-  @media screen and (min-width: 1101px) {
-    .CatButtons,
-    #main_product {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
-      grid-gap: 1rem;
-      padding-left: 0;
-    }
-    .list_grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
-      grid-gap: 1rem;
-      padding: 3% 3%;
-    }
-    .Info_short {
-      height: 28%;
-    }
-  }
-}
 p {
   margin-bottom: 0.2rem;
   font-size: 1.5vw;
@@ -248,5 +182,77 @@ nav {
   display: none;
 }
 
-.soldOut img {
+/* .soldOut img {
+} */
+
+@supports (display: grid) {
+  main {
+    max-width: 100%;
+    margin: 0 3%;
+  }
+  article {
+    margin: 0;
+  }
+  @media screen and (max-width: 768px) {
+    .CatButtons,
+    #main_product {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(70%, 1fr));
+      grid-gap: 1rem;
+      padding-left: 0;
+    }
+    .list_grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+      grid-gap: 1rem;
+      padding: 3% 3%;
+    }
+    .CatButtons a {
+      padding: 2% 30%;
+      font-size: 2vw;
+    }
+    .Info_short {
+      height: 26%;
+    }
+  }
+  @media screen and (min-width: 769px) and (max-width: 1100px) {
+    .CatButtons,
+    #main_product {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+      grid-gap: 1rem;
+      padding-left: 0;
+    }
+    .list_grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(35%, 1fr));
+      grid-gap: 1rem;
+      padding: 3% 3%;
+    }
+    .CatButtons a {
+      padding: 3% 30%;
+      font-size: 1.5vw;
+    }
+    .Info_short {
+      height: 23%;
+    }
+  }
+  @media screen and (min-width: 1101px) {
+    .CatButtons,
+    #main_product {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+      grid-gap: 1rem;
+      padding-left: 0;
+    }
+    .list_grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+      grid-gap: 1rem;
+      padding: 3% 3%;
+    }
+    .Info_short {
+      height: 28%;
+    }
+  }
 }
