@@ -24,7 +24,7 @@ function showProduct(product) {
     //clone it
     const copy = template.cloneNode(true);
     //change content **
-    copy.querySelector("h3").textContent = product.productdisplayname;
+    copy.querySelector("h2").textContent = product.productdisplayname;
     copy.querySelector(".type_brand").textContent = `${product.articletype}  |  ${product.brandname}`;
     copy.querySelector(".price").textContent = `${product.price} DKK`;
     copy.querySelector(".Img").src = `https://kea-alt-del.dk/t7/images/webp/1000/${product.id}.webp`;
@@ -40,7 +40,7 @@ function showProduct(product) {
         copy.querySelector(".discounted .percent"). textContent = `-${product.discount}%`;
         copy.querySelector(".price").textContent = `Before ${product.price} DKK`
     } else {
-         copy.querySelector(".Info_short .percent").classList.remove("percent");
+         copy.querySelector("article .percent").classList.remove("percent");
     }
     //grab parent
 
