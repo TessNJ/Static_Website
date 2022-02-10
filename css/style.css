@@ -22,6 +22,8 @@ main {
 
 article {
   margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
 }
 
 p {
@@ -132,8 +134,7 @@ a {
   color: rgb(0, 0, 0);
 }
 .Info_short a {
-  padding: 1% 2%;
-  background-color: #5e5e5e;
+  background-color: var(--secondary-colour);
   border: none;
   box-shadow: none;
   color: white;
@@ -141,8 +142,8 @@ a {
 }
 
 .Info_short a:hover {
-  background-color: rgb(177, 177, 177);
-  color: black;
+  background-color: #4d4d4d;
+  color: rgb(255, 255, 255);
 }
 
 nav a {
@@ -161,6 +162,7 @@ nav {
 .Info_short {
   background-color: #393939;
   color: white;
+  padding: 1rem;
 }
 
 #main_list .Img {
@@ -176,8 +178,12 @@ nav {
   justify-content: space-between;
 }
 
-/* .soldOut img {
-} */
+.soldout {
+  display: block;
+  position: absolute;
+  background: red;
+  padding: 10%;
+}
 
 @supports (display: grid) {
   main {
@@ -204,8 +210,11 @@ nav {
     padding: 2% 30%;
     font-size: 1rem;
   }
-  .Info_short div {
-    min-height: 3rem;
+  .Info_short {
+    min-height: 2.4rem;
+  }
+  .Info_short a {
+    padding: 3% 30%;
   }
   @media screen and (min-width: 768px) and (max-width: 1100px) {
     .CatButtons,
@@ -219,20 +228,28 @@ nav {
       padding: 3% 30%;
       font-size: 1rem;
     }
-    .Info_short div {
+    .Info_short {
       min-height: 2.2rem;
+    }
+    .Info_short a {
+      padding: 3% 20%;
     }
   }
   @media screen and (min-width: 1101px) {
-    .CatButtons,
     #main_product {
-      grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 3rem;
     }
-    .list_grid {
+    .list_grid,
+    .CatButtons {
       grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+      grid-gap: 1rem;
     }
-    .Info_short div {
-      min-height: 2rem;
+    .Info_short {
+      min-height: 26%;
+    }
+    .Info_short a {
+      padding: 3% 10%;
     }
   }
 }
