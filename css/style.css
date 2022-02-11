@@ -176,11 +176,34 @@ nav {
   padding: 0;
 }
 
-.soldout {
+.soldOut {
+  opacity: 0.4;
+}
+.soldOut img::after {
   display: block;
+  padding: 5%;
+  content: "";
+  background-color: green;
   position: absolute;
-  background: red;
-  padding: 10%;
+}
+
+.breadcrumbs {
+  grid-column: 1 / span 2;
+  display: flex;
+  gap: 5%;
+  list-style: none;
+  min-width: 100%;
+}
+
+.breadcrumbs li::after {
+  display: inline-block;
+  max-width: 10%;
+  max-height: 10%;
+  content: ">";
+  margin-left: 5%;
+}
+.breadcrumbs a {
+  text-decoration: underline;
 }
 
 @supports (display: grid) {
@@ -207,6 +230,9 @@ nav {
   .view {
     padding: 7% 5%;
   }
+  .display {
+    grid-column: 1 / span 2;
+  }
   @media screen and (min-width: 768px) and (max-width: 1100px) {
     .CatButtons,
     #main_product {
@@ -217,6 +243,9 @@ nav {
     }
     .view {
       padding: 5% 5%;
+    }
+    .display {
+      grid-column: 1;
     }
   }
   @media screen and (min-width: 1101px) {
@@ -231,6 +260,9 @@ nav {
     }
     .view {
       padding: 3% 5%;
+    }
+    .display {
+      grid-column: 1;
     }
   }
 }

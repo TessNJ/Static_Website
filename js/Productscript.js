@@ -22,11 +22,14 @@ function showProduct (product){
     //clone
     const copy = template.cloneNode(true);
     //change content
-    copy.querySelector("h1").textContent = product.productdisplayname;
-    copy.querySelector("div .description").innerHTML = product.description;
+    copy.querySelector(".displayName").textContent = product.productdisplayname;
+    copy.querySelector(".description").innerHTML = product.description;
     copy.querySelector("div .colour").textContent = `Colour: ${product.basecolour}`;
     copy.querySelector(".display .productImg").src = `https://kea-alt-del.dk/t7/images/webp/1000/${product.id}.webp`;
     copy.querySelector("div .brand").textContent = `Brand: ${product.brandname}`;
+    copy.querySelector(".hereCat").setAttribute("href", `productlist.html?category=${product.category}`);
+    copy.querySelector(".hereCat").textContent = product.brandname;
+    copy.querySelector(".hereName").textContent = product.productdisplayname;
     //grab parent
     const parent = document.querySelector("main");
     //append it 
