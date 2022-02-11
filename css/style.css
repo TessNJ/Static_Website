@@ -179,12 +179,15 @@ nav {
 .soldOut {
   opacity: 0.4;
 }
-.soldOut img::after {
-  display: block;
-  padding: 5%;
-  content: "";
-  background-color: green;
-  position: absolute;
+.soldOut h2::before {
+  content: "Sold Out";
+  background-color: #000000;
+  color: white;
+  padding: 5% 10%;
+  position: relative;
+  left: 3%;
+  top: -300%;
+  opacity: 1;
 }
 
 .breadcrumbs {
