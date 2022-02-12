@@ -198,9 +198,9 @@ nav {
   min-width: 100%;
 }
 
-.breadcrumbs li::after {
+.breadcrumbs .links::after {
   display: inline-block;
-  max-width: 10%;
+  max-width: 1%;
   max-height: 10%;
   content: ">";
   margin-left: 5%;
