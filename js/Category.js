@@ -9,15 +9,11 @@ fetch(url)
   });
 
 function handleCategories(data) {
-  console.log(data);
   data.forEach(showCategory);
 }
 function showCategory(categories) {
-  // grab template
   const template = document.querySelector("#templateCategory").content;
-  //clone it
   const copy = template.cloneNode(true);
-  //change content
   copy
     .querySelector(".link")
     .setAttribute(
@@ -25,8 +21,6 @@ function showCategory(categories) {
       `productlist.html?category=${categories.category}&start=10`
     );
   copy.querySelector(".link").textContent = categories.category;
-  // grab parent
   const parent = document.querySelector("ul");
-  //append
   parent.appendChild(copy);
 }

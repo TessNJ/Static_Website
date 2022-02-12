@@ -1,6 +1,5 @@
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get("id");
-// console.log(urlParams.get("id"));
 
 /*Product Page*/
 
@@ -15,12 +14,8 @@ fetch(url)
   });
 
 function showProduct(product) {
-  console.log(product);
-  //grab template
   const template = document.querySelector("#templateProduct").content;
-  //clone
   const copy = template.cloneNode(true);
-  //change content
   copy.querySelector(".displayName").textContent = product.productdisplayname;
   copy.querySelector(".description").innerHTML = product.description;
   copy.querySelector(
@@ -53,9 +48,7 @@ function showProduct(product) {
   } else {
     copy.querySelector("section .percent").classList.remove("percent");
   }
-  //grab parent
   const parent = document.querySelector("main");
-  //append it
   parent.appendChild(copy);
 }
 

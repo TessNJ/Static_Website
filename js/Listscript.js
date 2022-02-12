@@ -13,17 +13,12 @@ fetch(url)
   });
 
 function handleProductList(data) {
-  console.log(data);
   data.forEach(showProduct);
 }
 
 function showProduct(product) {
-  //soldOut onSale
-  //grab the template
   const template = document.querySelector("#templateList").content;
-  //clone it
   const copy = template.cloneNode(true);
-  //change content **
   copy.querySelector("h2").textContent = product.productdisplayname;
   copy.querySelector(
     ".type_brand"
@@ -53,7 +48,6 @@ function showProduct(product) {
   } else {
     copy.querySelector("article .percent").classList.remove("percent");
   }
-  //grab parent
 
   const parent = document.querySelector("div.list_grid");
   //append
