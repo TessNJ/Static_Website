@@ -61,3 +61,34 @@ function showProduct(product) {
 }
 
 /*Next page*/
+//My attempt at make a next and previous button
+
+// document.querySelector("#prev").addEventListener("click", previousPage);
+// document.querySelector("#next").addEventListener("click", nextPage);
+
+// function previousPage(prevPage) {
+//   const urlParams = new URLSearchParams(window.location.search);
+//   const query = urlParams.get("category");
+//   const start = urlParams.get("start");
+//   var number = Math.round(start - 10);
+//   console.log("urlParams");
+//   if (start < 10) {
+//     document
+//       .querySelector("#next")
+//       .setAttribute(
+//         "href",
+//         `productlist.html?category=${query}&start=${number}`
+//       );
+//   }
+// }
+
+// function nextPage() {
+//   const urlParams = new URLSearchParams(window.location.search);
+//   const query = urlParams.get("category");
+//   const start = urlParams.get("start");
+//   var number = Math.round(start + 10);
+//   console.log(start);
+//   document
+//     .querySelector("#next")
+//     .setAttribute("href", `productlist.html?category=${query}&start=${number}`);
+// }
