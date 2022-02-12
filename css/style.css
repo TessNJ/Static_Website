@@ -23,7 +23,7 @@ main {
 p {
   margin-bottom: 0.2rem;
   font-size: 1rem;
-  max-width: 62ch;
+  max-width: 75ch;
 }
 
 #main_product img {
@@ -104,12 +104,7 @@ h1 {
   background-color: #707070;
 }
 
-/* #Info { */
-/* padding-top: 30%; */
-/* margin-left: 7.5rem; */
-/* } */
-
-#Info div {
+.Info div {
   max-width: 100%;
   padding: 5% 0;
 }
@@ -179,15 +174,24 @@ nav {
 .soldOut {
   opacity: 0.4;
 }
-.soldOut h2::before {
+.soldOut h2::before,
+.soldOut .displayName::before {
   content: "Sold Out";
   background-color: #000000;
   color: white;
+  opacity: 1;
+}
+
+.soldOut h2::before {
   padding: 5% 20%;
   position: relative;
-  left: 20%;
-  top: -1000%;
-  opacity: 1;
+  left: 25%;
+  top: -500%;
+}
+.soldOut .displayName::before {
+  padding: 2% 10%;
+  position: absolute;
+  font-size: 1.5rem;
 }
 
 .breadcrumbs {
@@ -207,6 +211,10 @@ nav {
 }
 .breadcrumbs a {
   text-decoration: underline;
+}
+.dsInfo {
+  grid-column: 1 / span 2;
+  font-size: 1.5rem;
 }
 
 @supports (display: grid) {
@@ -236,6 +244,13 @@ nav {
   .display {
     grid-column: 1 / span 2;
   }
+  .breadcrumbs {
+    flex-wrap: wrap;
+  }
+  .soldOut .displayName::before {
+    left: 25%;
+    top: 50%;
+  }
   @media screen and (min-width: 768px) and (max-width: 1100px) {
     .CatButtons,
     #main_product {
@@ -249,6 +264,13 @@ nav {
     }
     .display {
       grid-column: 1;
+    }
+    .breadcrumbs {
+      flex-wrap: wrap;
+    }
+    .soldOut .displayName::before {
+      left: 10%;
+      top: 50%;
     }
   }
   @media screen and (min-width: 1101px) {
@@ -266,6 +288,13 @@ nav {
     }
     .display {
       grid-column: 1;
+    }
+    .breadcrumbs {
+      flex-wrap: nowrap;
+    }
+    .soldOut .displayName::before {
+      left: 10%;
+      top: 70%;
     }
   }
 }

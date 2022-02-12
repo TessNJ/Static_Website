@@ -38,7 +38,8 @@ function showProduct(product) {
   copy.querySelector(".price").textContent = `${product.price} DKK`;
 
   if (product.soldout) {
-    copy.querySelector("section").classList.add("soldOut");
+    copy.querySelector(".display").classList.add("soldOut");
+    copy.querySelector(".Info").classList.add("soldOut");
   }
   if (product.discount) {
     copy.querySelector("section").classList.add("onSale");
