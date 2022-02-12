@@ -183,10 +183,10 @@ nav {
   content: "Sold Out";
   background-color: #000000;
   color: white;
-  padding: 5% 10%;
+  padding: 5% 20%;
   position: relative;
-  left: 3%;
-  top: -300%;
+  left: 20%;
+  top: -1000%;
   opacity: 1;
 }
 
